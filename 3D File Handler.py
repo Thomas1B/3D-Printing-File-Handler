@@ -291,24 +291,23 @@ def show_NeedFinish():
     '''
     Function to show what files are in the "Need to slice" folder.
     '''
-    print_color("Need to Slice:", color='red')
     need = get_Need()
+    print_color(f"Need to Slice, Count = {len(need)}:", color='red')    
     print(need, '\n')
 
 
 def show_NeedsSliced():
     '''Function to show files that need to be sliced'''
-    print_color("The following files need to be sliced:",
-                color='red', attrs=['bold'])
     needs_sliced = get_NeedSlicing()
+    print_color(f"The following files need to be sliced, Count = {len(needs_sliced)}:",color='red', attrs=['bold'])
     print(needs_sliced, '\n')
 
 
 def show_Ready():
     '''Function to show what files are ready to print'''
-    print_color("Ready to print:", color='yellow')
-    files = get_Ready()
-    print(files, '\n')
+    ready = get_Ready()
+    print_color(f"Ready to Print, Count = {len(ready)}:", color='yellow')
+    print(ready, '\n')
 
 
 def show_models():
