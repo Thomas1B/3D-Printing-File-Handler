@@ -2,7 +2,7 @@
 
 import numpy as np
 import inspect
-from ..myPrints import color_txt
+from myPrints import color_txt
 
 
 def show_docString(function):
@@ -13,8 +13,10 @@ def show_docString(function):
         function: a function
     '''
     if callable(function):
-        print("Docstring for {}:".format(function.__name__))
+        print(f'\nDocstring for "{color_txt(function.__name__, color="cyan")}":')
+        print('------------------------------------')
         print(function.__doc__)
+        print('------------------------------------\n')
     else:
         print(f'"{function}" is not a function. Please fix...\n')
 
@@ -32,10 +34,10 @@ def show_modules(moduleName):
          (or docstring of a function)
     '''
 
-    if callable(moduleName):
+    if callable(moduleName): # then it's a function
         show_docString(moduleName)
     else:
-        print(f'List of available functions in "{moduleName.__name__}":')
+        print(f'List of available functions in "{color_txt(moduleName.__name__, color="cyan")}":')
         for i, func in enumerate(moduleName.func_list):
             print("   {}: {}".format(i, func.__name__))
 
