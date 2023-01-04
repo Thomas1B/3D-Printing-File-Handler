@@ -323,7 +323,7 @@ def show_commands():
     '''
     Function to print possible commands
     '''
-    txt = '   q - Quit Program, c - Clear Screen, s - Show Commands.\n' \
+    txt = '   q - Quit Program. c - Clear Screen.\n' \
         '\n' \
         '   1 - Show all Info.             4 - Show files that need to be finished.\n' \
         '   2 - Check for duplices.        5 - Show files are ready to print\n' \
@@ -412,8 +412,6 @@ while (True):
                 quit_program(quit_check)
                 break
             case 'c':
-                clear_screen()
-            case 's':
                 clear_screen()
                 show_commands()
             case '1':
