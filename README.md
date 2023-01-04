@@ -6,3 +6,6 @@ Depending on the user inputs, it will show completed files, files need to be sli
 moves files and much more!
 
 To run script write: `python 3D File Handler.py`
+
+
+STL, gcode and x3g files are included to use an example.
