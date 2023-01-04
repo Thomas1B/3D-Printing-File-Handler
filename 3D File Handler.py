@@ -441,7 +441,10 @@ while (True):
                 else:
                     txt = f'\nThere are {len(need)} files. Would you like to move them all? (y/n): '
                     user = input(txt)
-                    if user == 'y':
+                    if user == 'n' and len(need) == 1:
+                        clear_screen()
+                        show_commands()                    
+                    elif user == 'y':
                         for file in need:
                             result = move_file(
                                 folders_name[1], folders_name[2], file+'.STL', check_move=False, remove=False)
@@ -461,7 +464,7 @@ while (True):
                 if len(ready) == 0:
                     print('\nThere are 0 files to move!\n')
                 else:
-                    txt = f'\nThere are {len(ready)*2} files. Would you like to move them all? (y/n): '
+                    txt = f'\nThere are {len(ready)} files. Would you like to move them all? (y/n): '
                     user = input(txt)
                     if user == 'n' and len(ready) == 1:
                         clear_screen()
