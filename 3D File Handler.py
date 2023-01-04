@@ -299,7 +299,7 @@ def show_NeedFinish():
 def show_NeedsSliced():
     '''Function to show files that need to be sliced'''
     needs_sliced = get_NeedSlicing()
-    print_color(f"The following files need to be sliced, Count = {len(needs_sliced)}:",color='red', attrs=['bold'])
+    print_color(f"The following models need to be sliced, Count = {len(needs_sliced)}:",color='red', attrs=['bold'])
     print(needs_sliced, '\n')
 
 
